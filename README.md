@@ -1,5 +1,5 @@
 ### 안녕하세요, youngkuen입니다 👋
-산업 현장 데이터(센서·PDF 리포트)를 분석·자동화하면서, ML/AI로 역량을 넓혀가고 있는 주니어 Python 개발자입니다.
+제조 현장 데이터(PLC·비전·진동 센서)를 다루며 ML/AI 파이프라인을 실무에 적용해 온 주니어 Python 개발자입니다.
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
 ![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat&logo=pandas&logoColor=white)
@@ -12,13 +12,21 @@
 
 ## 📌 Portfolio
 
-### [scrubber-monitoring-pro](https://github.com/youngkuen/scrubber-monitoring-pro)
-선박 스크러버(배기가스 세정 장치) 계측 리포트(PDF)를 인터랙티브 대시보드로 자동 변환하는 GUI 도구.
+### [LLMops-pipeline](https://github.com/youngkuen/LLMops-pipeline)
+정형 데이터를 업로드하면 LLM이 분석 계획을 세우고 ML 코드를 생성 → 방법론 검증 → 실행 → 진단 → 자동 개선까지 수행하는 End-to-End 파이프라인.
+- LLM이 생성한 코드의 데이터 누수·교차검증 오류를 정규식이 아닌 **AST 기반 정적 분석**으로 탐지 (변수 별칭까지 추적)
+- 검증 실패 시 피드백을 반영해 재생성하는 이중 개선 루프(코드 재생성 ↔ 성능 기준 재시도) 설계
+- 이메일·전화번호 등 PII를 LLM에 전달되는 지점에서만 자동 마스킹, 데이터 실행은 로컬에서만 수행
 
-- **문제**: 계측값이 표 형태의 PDF로만 쌓여 있어, 이상 여부를 확인하려면 매번 표를 눈으로 훑어야 했음
-- **해결**: PDF 표 구조를 역공학해 파싱하고, Plotly 기반 인터랙티브 대시보드(HTML)로 자동 변환하는 배치 처리 GUI 도구를 제작
-- **개발 과정**: 하드코딩된 1회성 스크립트 → 파일 선택 다이얼로그 → 파일별 결과 분리 → 다중 파일 일괄 처리 + 개별 파일 에러 격리까지, 실사용 피드백을 반영해 4단계에 걸쳐 반복 개선 ([EVOLUTION.md](https://github.com/youngkuen/scrubber-monitoring-pro/blob/main/EVOLUTION.md)에 기록)
-- 포트폴리오화하며 핵심 로직(표 파싱, 대시보드 생성)을 GUI/PDF I/O와 분리한 순수 함수로 리팩터링하고 단위 테스트를 추가
+### 제조 현장 AI 3종
+자동차 부품 제조 실무 프로젝트를 실데이터·사내 식별정보 제거 후 포트폴리오로 정리했습니다 (각 저장소 README에 처리 내역 명시).
+- **[automotive-vision-inspection](https://github.com/youngkuen/automotive-vision-inspection)** — 비전 검사 NG 판정을 PLC·진동 데이터와 시간 기준으로 엮어 원인을 추적하는 파이프라인
+- **[automotive-injection-pdm](https://github.com/youngkuen/automotive-injection-pdm)** — 사출성형 설비 실시간 이상탐지 + SHAP·LLM으로 판단 근거를 해석하는 예지보전(PdM) 리포트 시스템
+- **[automotive-foam-process-ai](https://github.com/youngkuen/automotive-foam-process-ai)** — 발포 성형 공정의 희소 불량 이상탐지 및 공정조건 최적화 AI
+
+### 그 외
+- **[scrubber-monitoring-pro](https://github.com/youngkuen/scrubber-monitoring-pro)** — PDF 계측 리포트를 인터랙티브 Plotly 대시보드로 자동 변환하는 GUI 도구. 하드코딩 스크립트 → 배치 처리 도구로 발전시킨 과정을 [EVOLUTION.md](https://github.com/youngkuen/scrubber-monitoring-pro/blob/main/EVOLUTION.md)에 기록
+- **[lecture-transcript-scraper](https://github.com/youngkuen/lecture-transcript-scraper)** — 가상 스크롤 + 중첩 iframe 구조의 자막을 누락·중복 없이 수집하는 크롤러
 
 ## 📫 Contact
 
