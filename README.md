@@ -1,4 +1,4 @@
-### 안녕하세요, youngkuen입니다 👋
+### 안녕하세요, 최영근입니다 👋
 제조 현장 데이터(PLC·비전·진동 센서)로 ML 파이프라인을 실무에 적용해 왔고, 지금은 **LLM·RAG·에이전트 기반 AI 엔지니어링으로 영역을 넓혀가고 있습니다.**
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
